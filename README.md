@@ -8,7 +8,9 @@ Overview
 
 The car simulator is built in the Unity3D Game Engine (Version 4.x), using pre-existing assets for the road and terrain. Currently, the simulator applies Artificial Intelligence to the car by sending and receiving information to a server. As such, the simulator is accompanied by a sample Artificial Intelligence server coded in Node.js.
 
-Since default Unity projects maintain large amounts of metadata personalized to each user, the simulator utilizes an alternate form for source control (.metadata). This will require a more specific setup to manage the program through GitHub. 
+Since default Unity projects maintain large amounts of metadata personalized to each user, the simulator utilizes an alternate form for source control (.metadata). This will require a more specific setup to manage the program through GitHub.
+
+There is more information available on the GitHub Wiki.
 
 Pre-requisites
 --------------
@@ -35,3 +37,15 @@ Setup
 12. Edit the server and port to point towards your server(the example is on localhost:3000).
 
 Note: it is currently not known if a opening a new/separate project first is required to properly change the version control setting, but better safe than sorry.
+
+### Node.js AI server
+
+1.  Download and install Node.js: http://nodejs.org/
+2.  Open up the command prompt
+3.  Navigate to the SampleAIServer folder
+4.  Enter "node SimpleAI.js" to run the server
+6.  Open the Car Simulator in Unity3D
+7.  The Car model stores what port it will interact with
+8.  To view this value, select the car model in the scene (Hierarchy -> Car)
+9.  Near the bottom, under "Car AI Networked (script)", there is a "Port" setting (3000 in this case)
+10. Run the program and the Car should move in accordance with the Node.js server
